@@ -1,0 +1,35 @@
+
+ <div class="container">
+
+    <form (ngSubmit)="getDrugDetailsById()">
+        <label for="drugId1">drugId</label><br>
+        <input type="text" id="drugId1" name="drugId1" [(ngModel)]="drugId1"><br>
+        
+        <button class="btn">Search</button>
+      </form> 
+      
+    <table class="table table-bordered table-striped" *ngIf="friends">
+      <thead>
+      <tr>
+        <th>drugId</th>
+        <th>name</th>
+        <th>manufacturer</th>
+        <th>ManufacturedDate</th>
+        <th>expiryDate</th>
+        <th>quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span>{{friends.drugId}}</span></td>
+        <td><span>{{friends.name}}</span></td>
+        <td><span>{{friends.manufacturer}}</span></td>
+        <td><span>{{friends.manufacturedDate}}</span></td>
+        <td><span>{{friends.expiryDate}}</span></td>
+        <td><span>{{friends.quantity}}</span></td>
+      </tr>
+
+            </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
